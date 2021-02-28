@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "421670303098",
+    "firebase_url": "https://assignment3saylanihome.firebaseio.com",
+    "project_id": "assignment3saylanihome",
+    "storage_bucket": "assignment3saylanihome.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421670303098:android:baca21e5c46135ca9992c3",
+        "android_client_info": {
+          "package_name": "com.campusrecruitment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421670303098-rp6g53sbt8hstqr2npfi2ifq5n31tb6n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUeg49E6QBc9SrZX-lOJU90phS0VCFZ6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "421670303098-rp6g53sbt8hstqr2npfi2ifq5n31tb6n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
