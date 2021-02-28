@@ -21,7 +21,7 @@ const AdminStudent = (props) => {
     <Content>
       <List>
         <ListItem itemHeader first>
-          <Text >COMPANIES</Text>
+          <Text >STUDENTS</Text>
         </ListItem>
         {props.students.map((value,index)=>{
           return(
@@ -57,7 +57,7 @@ const AdminStudent = (props) => {
         })
       }
 
-      
+
         
               </List>
               <Button onPress={Logout} title="LOGOUT"/>
