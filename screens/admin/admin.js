@@ -67,11 +67,11 @@ const Student =({props}) => {
                   <View style={styles.btnBox}>
 
             <Button onPress={Login}  style={styles.Button} >
-              <Text style={styles.text}>Login</Text>
+              <Text style={{color:"white"}}>Login</Text>
               </Button>
 
               <Button onPress={()=>props.navigation.navigate("Admin Registration")}   style={styles.Button} >
-              <Text >Register</Text>
+              <Text style={{color:"white"}} >Register</Text>
               </Button>
               
               </View>

@@ -12,25 +12,25 @@ const AdminStudent = (props) => {
   const Logout=()=>{
     auth()
   .signOut()
-  .then((user) =>
+  .then(() =>
   
   console.log('User signed out!'));
     }
-    const deletedata =()=>{
-        // database().ref("/student").child(props.students.Key).remove()
+    const deletedata =(index)=>{
+        props.students.slice(index,1 )
 
     }
   return (
     // <ScrollView>
-    <Container>
+    <Container style={{backgroundColor:"#580000"}}>
 
     <Content>
       <List>
         <ListItem style={{alignSelf:"center"}} itemHeader first>
-          <Text style={{color:"orange"}} >WELCOME</Text>
+          <Text style={{color:"orange",fontSize:35}} >WELCOME</Text>
         </ListItem>
         <ListItem style={{alignSelf:"center"}} itemHeader first>
-          <Text style={{color:"red"}} >STUDENTS</Text>
+          <Text style={{color:"white",fontSize:22}} >STUDENTS</Text>
         </ListItem>
         {props.students.map((value,index)=>{
             return(
@@ -59,7 +59,7 @@ const AdminStudent = (props) => {
           <Text >Date : {value.Date}</Text>
         </ListItem>
         <ListItem style={{alignSelf:"center" }} >
-          <Button onPress={deletedata} title="DELETE" />
+          <Button  onPress={()=>deletedata(index)} title="DELETE" />
         </ListItem>
           
 </Card>
@@ -68,7 +68,8 @@ const AdminStudent = (props) => {
         })
     }
  <ListItem style={{alignSelf:"center"}} itemHeader first>
-          <Text style={{color:"red"}} >COMPANIES</Text>
+     
+          <Text style={{color:"white",fontSize:22}} >COMPANIES</Text>
         </ListItem>
 
         {props.company.map((value,index)=>{
@@ -104,7 +105,10 @@ const AdminStudent = (props) => {
       }
         
               </List>
-              <Button onPress={Logout} title="LOGOUT"/>
+              <View style={styles.btn}>
+              <Button  onPress={Logout} title="LOGOUT"/>
+
+              </View>
     </Content>
   </Container>
        /* </ScrollView> */
@@ -113,14 +117,6 @@ const AdminStudent = (props) => {
     };
     
     // define your styles
-    const styles = StyleSheet.create({
-        container: {
-            flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-    backgroundColor: '#2c3e50',
-  },
-});
 
 //make this component available to the app
 const mapStateToProps = (state) => {
@@ -137,3 +133,19 @@ const mapDispatchToProps = (dispatch) => ({
 
 export default connect(mapStateToProps, mapDispatchToProps)(AdminStudent);
 
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+backgroundColor: '#2c3e50',
+},
+btn:{
+    marginTop:10,
+    marginBottom:5,
+    width:Dimensions.get('window').width*.80,
+    alignSelf:"center",
+    
+
+}
+});

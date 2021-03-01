@@ -114,7 +114,7 @@ console.log(props.students)
    
 
             <Button onPress={Register}   >
-              <Text>Sign Up</Text>
+              <Text style={{color:"white"}}>Sign Up</Text>
               </Button>
           </View>
            

@@ -4,7 +4,7 @@ import { View,Dimensions, Text, StyleSheet } from 'react-native';
 import {Container,Button,Content,Form, Item, Input, Label } from 'native-base'
 import auth from '@react-native-firebase/auth';
 import database from "@react-native-firebase/database";
-const Student =({props}) => {
+const Student =({props,student}) => {
     const [Email,setEmail] = useState("")
     const [Password,setPassword] =useState("")
     const [ErrorUsername,setErrorUsername] =useState("")
@@ -14,6 +14,8 @@ const Student =({props}) => {
         auth()
         .signInWithEmailAndPassword(Email,Password)
             .then(()=>{
+              
+
 
 
             })
@@ -45,7 +47,7 @@ const Student =({props}) => {
 
 
     return (
-        <Container>
+        <Container >
         <Content>
         <Form >
             <Item  >
@@ -67,11 +69,11 @@ const Student =({props}) => {
                   <View style={styles.btnBox}>
 
             <Button onPress={Login}  style={styles.Button} >
-              <Text style={styles.text}>Login</Text>
+              <Text style={{color:"white"}}>Login</Text>
               </Button>
 
               <Button onPress={()=>props.navigation.navigate("Student Registration")}   style={styles.Button} >
-              <Text >Register</Text>
+              <Text style={{color:"white"}} >Register</Text>
               </Button>
               
               </View>

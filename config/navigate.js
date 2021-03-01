@@ -46,6 +46,9 @@ function Navigate(props) {
 
         return subscriber; // unsubscribe on unmount
     }, []);
+    // console.log(props.studentIdentification)
+    // console.log(props.companyIdentification)
+    // const StudentIdentification = props.students[0].Student
     if (initializing) 
         return null;
     return (

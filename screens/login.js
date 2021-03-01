@@ -11,7 +11,7 @@ const Login = (props) => {
     {/* <Header hasTabs /> */}
     <Tabs>
       <Tab heading="Student">
-        <Student props={props} />
+        <Student props={props} student={"Student"} />
       </Tab>
       <Tab heading="Admin">
         <Admin props={props}  />

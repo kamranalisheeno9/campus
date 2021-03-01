@@ -11,7 +11,7 @@ const AdminStudent = (props) => {
   const Logout=()=>{
     auth()
   .signOut()
-  .then((user) =>
+  .then(() =>
   
   console.log('User signed out!'));
     }
